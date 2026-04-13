@@ -1,41 +1,65 @@
-// Script pour Bodega Lomé
+/**
+ * Bodega Lomé - Script Premium
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Menu mobile
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+    // Initialisation AOS est faite dans le HTML via script tag
+    
+    // Navbar Scroll Effect
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
 
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Fermer le menu lors du clic sur un lien
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+    // Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            // Dans cette version premium, on pourrait ouvrir un overlay plein écran
+            console.log('Toggle mobile menu');
         });
     }
 
-    // Animation au défilement (Simple Reveal)
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-                entry.target.classList.remove('opacity-0', 'translate-y-10');
+    // Sécurité: Sanitisation factice et validation de formulaire
+    const newsletterForm = document.querySelector('footer form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = newsletterForm.querySelector('input');
+            const button = newsletterForm.querySelector('button');
+            
+            if (input.value && input.value.includes('@')) {
+                const originalText = button.innerText;
+                button.innerText = "MERCI !";
+                button.disabled = true;
+                button.classList.add('bg-[#20B2AA]');
+                
+                input.value = "";
+                
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.disabled = false;
+                    button.classList.remove('bg-[#20B2AA]');
+                }, 3000);
             }
         });
-    }, observerOptions);
+    }
 
-    // Appliquer aux sections
-    document.querySelectorAll('section').forEach(section => {
-        section.classList.add('transition-all', 'duration-1000', 'transform', 'opacity-0', 'translate-y-10');
-        observer.observe(section);
+    // Smooth Scroll interactif
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
