@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodega Lomé | Bar Latino & Restaurant Grill</title>
+    <meta name="description" content="Découvrez l'ambiance chaleureuse de Bodega Lomé. Le meilleur de la cuisine Latino et du grill à Lomé, Togo.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FFF9F5] text-gray-800 font-['Montserrat']">
+    
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0">
+                    <h1 class="font-['Playfair_Display'] text-3xl font-bold text-[#E2725B]">Bodega Lomé</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#accueil" class="hover:text-[#E2725B] transition-colors font-semibold">Accueil</a>
+                        <a href="#menu" class="hover:text-[#E2725B] transition-colors font-semibold">Menu</a>
+                        <a href="#propos" class="hover:text-[#E2725B] transition-colors font-semibold">À Propos</a>
+                        <a href="#galerie" class="hover:text-[#E2725B] transition-colors font-semibold">Galerie</a>
+                        <a href="#contact" class="hover:text-[#E2725B] transition-colors font-semibold">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-[#E2725B]">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-4 shadow-lg text-center">
+            <a href="#accueil" class="block text-lg hover:text-[#E2725B]">Accueil</a>
+            <a href="#menu" class="block text-lg hover:text-[#E2725B]">Menu</a>
+            <a href="#propos" class="block text-lg hover:text-[#E2725B]">À Propos</a>
+            <a href="#galerie" class="block text-lg hover:text-[#E2725B]">Galerie</a>
+            <a href="#contact" class="block text-lg hover:text-[#E2725B]">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="assets/hero.png" alt="Hero Restaurant" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-4 pt-20">
+            <h2 class="font-['Playfair_Display'] text-5xl md:text-8xl font-bold mb-6 animate-fade-in">Sabor y Pasión</h2>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto italic font-light animate-slide-up">
+                L'essence de l'Amérique Latine au cœur de Lomé. Grillades généreuses et cocktails vibrants.
+            </p>
+            <a href="#menu" class="bg-[#E2725B] hover:bg-[#c95f4a] text-white px-10 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-xl">
+                Réserver une table
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center">
+            <span class="text-white text-sm uppercase tracking-widest mb-2">Découvrir</span>
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7-7-7" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- À Propos -->
+    <section id="propos" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Cocktail" class="rounded-2xl shadow-2xl z-10 relative">
+                    <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-[#40E0D0]/10 rounded-full -z-10"></div>
+                </div>
+                <div data-aos="fade-left">
+                    <span class="text-[#40E0D0] font-bold tracking-widest uppercase mb-4 block">Notre Concept</span>
+                    <h2 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-8 text-[#E2725B]">Un voyage sensoriel, une escale à Lomé.</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Bodega Lomé n'est pas qu'un restaurant, c'est une célébration de la convivialité. Né de la passion pour les saveurs ibériques et latines, nous avons créé un espace où la chaleur de Lomé rencontre l'énergie de Buenos Aires et Madrid.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Que ce soit pour un cocktail en terrasse ou un dîner grillé au feu de bois, chaque instant à la Bodega est une parenthèse enchantée, rythmée par des notes de salsa et le sourire de notre équipe.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="py-24 bg-[#FFF9F5]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-[#E2725B] font-bold tracking-widest uppercase mb-4 block">La Carte</span>
+            <h2 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-16 underline decoration-[#40E0D0]">Nos Délices Signature</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <!-- Entrées -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-[#E2725B]">
+                    <h3 class="font-['Playfair_Display'] text-2xl font-bold mb-6 flex items-center">
+                        <span class="mr-3">🥗</span> Las Entradas
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-start border-b border-gray-100 pb-2">
+                            <div>
+                                <h4 class="font-bold">Empanadas de Carne</h4>
+                                <p class="text-sm text-gray-500">Bœuf haché, oignons, épices secrètes (3 pièces)</p>
+                            </div>
+                            <span class="text-[#E2725B] font-bold">4.500 FCFA</span>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-gray-100 pb-2">
+                            <div>
+                                <h4 class="font-bold">Ceviche Tropical</h4>
+                                <p class="text-sm text-gray-500">Poisson frais du jour, mangue, citron vert, coriandre</p>
+                            </div>
+                            <span class="text-[#E2725B] font-bold">6.000 FCFA</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold">Tacos Loméen</h4>
+                                <p class="text-sm text-gray-500">Poulet mariné, crème d'avocat, piment doux</p>
+                            </div>
+                            <span class="text-[#E2725B] font-bold">5.500 FCFA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plats -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-[#40E0D0]">
+                    <h3 class="font-['Playfair_Display'] text-2xl font-bold mb-6 flex items-center">
+                        <span class="mr-3">🔥</span> Los Platos Principales
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-start border-b border-gray-100 pb-2">
+                            <div>
+                                <h4 class="font-bold">Parrillada Mixta</h4>
+                                <p class="text-sm text-gray-500">Assortiment de viandes grillées (Bœuf, Poulet, Chorizo)</p>
+                            </div>
+                            <span class="text-[#E2725B] font-bold">12.500 FCFA</span>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-gray-100 pb-2">
+                            <div>
+                                <h4 class="font-bold">Lomo Saltado</h4>
+                                <p class="text-sm text-gray-500">Sauté de bœuf péruvien, oignons rouges, frites maison</p>
+                            </div>
+                            <span class="text-[#E2725B] font-bold">9.500 FCFA</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold">Gambas à la Plancha</h4>
+                                <p class="text-sm text-gray-500">Gambas géantes, ail, persillade, riz au safran</p>
+                            </div>
+                            <span class="text-[#E2725B] font-bold">11.000 FCFA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <button class="border-2 border-[#E2725B] text-[#E2725B] hover:bg-[#E2725B] hover:text-white px-8 py-3 rounded-full font-bold transition-all">
+                    Voir Tout le Menu (PDF)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section id="galerie" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-['Playfair_Display'] text-4xl font-bold">Instantanés de la Bodega</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-xl h-64 shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80" alt="Plat" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-xl h-64 shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=400&q=80" alt="Cocktail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-xl h-64 shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=400&q=80" alt="Ambiance" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-xl h-64 shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=400&q=80" alt="Restaurant" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avis -->
+    <section class="py-24 bg-[#40E0D0]/5">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="text-4xl mb-8 block">"</span>
+            <div class="italic text-2xl text-gray-700 leading-relaxed mb-8">
+                "Une explosion de saveurs ! Le Ceviche est tout simplement divin et l'accueil est le plus chaleureux de tout Lomé. On se croirait vraiment ailleurs."
+            </div>
+            <div class="flex items-center justify-center space-x-4">
+                <img src="https://i.pravatar.cc/100?u=1" class="w-12 h-12 rounded-full border-2 border-[#E2725B]" alt="Profile">
+                <div class="text-left">
+                    <p class="font-bold">Jean-Marc T.</p>
+                    <div class="flex text-yellow-400 text-sm">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="font-['Playfair_Display'] text-4xl font-bold mb-8 text-[#E2725B]">Venez nous voir</h2>
+                    <ul class="space-y-6 text-lg">
+                        <li class="flex items-start">
+                            <span class="mr-4 text-2xl text-[#40E0D0]">📍</span>
+                            <div>
+                                <p class="font-bold">Adresse</p>
+                                <p class="text-gray-600">Rue du Palmier, Quartier Administratif, Lomé, Togo</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-4 text-2xl text-[#40E0D0]">📞</span>
+                            <div>
+                                <p class="font-bold">Téléphone</p>
+                                <p class="text-gray-600">+228 90 00 00 01</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-4 text-2xl text-[#40E0D0]">✉️</span>
+                            <div>
+                                <p class="font-bold">Email</p>
+                                <p class="text-gray-600">hola@bodega-lome.tg</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-4 text-2xl text-[#40E0D0]">⏰</span>
+                            <div>
+                                <p class="font-bold">Horaires</p>
+                                <p class="text-gray-600">Lun - Sam: 11:30 - 23:30<br>Dimanche: Fermé</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15870.368731057474!2d1.2158!3d6.1378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102143d3b7650f9f%3A0x6b2e1f486488390b!2sLom%C3%A9!5e0!3m2!1sfr!2stg!4v1620000000000" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A1A1A] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-center md:text-left">
+                <div>
+                    <h2 class="font-['Playfair_Display'] text-2xl font-bold text-[#E2725B]">Bodega Lomé</h2>
+                    <p class="text-gray-400 mt-2 text-sm italic">Sabor, Ritmo y Lomé.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-2xl hover:text-[#40E0D0] transition-colors">📱</a>
+                    <a href="#" class="text-2xl hover:text-[#40E0D0] transition-colors">📸</a>
+                    <a href="#" class="text-2xl hover:text-[#40E0D0] transition-colors">📘</a>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-sm">© 2024 Bodega Lomé. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
